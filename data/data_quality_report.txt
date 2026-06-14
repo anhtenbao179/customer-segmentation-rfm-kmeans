@@ -1,0 +1,39 @@
+BÁO CÁO TIỀN XỬ LÝ DỮ LIỆU ONLINE RETAIL
+=========================================
+
+1. Thông tin dữ liệu ban đầu
+- Số dòng ban đầu: 541,909
+- Số cột ban đầu: 8
+- Số khách hàng có mã CustomerID ban đầu: 4,372
+
+2. Các vấn đề phát hiện trong dữ liệu
+- Số dòng trùng lặp: 5,268
+- Số hóa đơn bị hủy InvoiceNo bắt đầu bằng 'C': 9,288
+- Số dòng Quantity <= 0: 10,624
+- Số dòng UnitPrice <= 0: 2,517
+
+3. Giá trị thiếu theo cột
+InvoiceNo           0
+StockCode           0
+Description      1454
+Quantity            0
+InvoiceDate         0
+UnitPrice           0
+CustomerID     135080
+Country             0
+
+4. Sau khi làm sạch
+- Số dòng giao dịch hợp lệ còn lại: 392,692
+- Số khách hàng hợp lệ còn lại: 4,338
+- Ngày giao dịch nhỏ nhất: 2010-12-01 08:26:00
+- Ngày giao dịch lớn nhất: 2011-12-09 12:50:00
+- Ngày tham chiếu tính Recency: 2011-12-10 12:50:00
+
+5. Bảng RFM tạo ra
+- Số dòng bảng RFM: 4,338
+- Các cột chính: CustomerID, Recency, Frequency, Monetary
+- Các cột tăng cường: Recency_Log, Frequency_Log, Monetary_Log, Customer_Value_Level
+
+6. File kết quả
+- outputs/rfm_customers.csv
+- outputs/online_retail_cleaned_sample.csv
